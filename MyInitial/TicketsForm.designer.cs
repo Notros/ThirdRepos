@@ -95,6 +95,7 @@
             this.radBalcony.TabIndex = 6;
             this.radBalcony.Text = "Balcony";
             this.radBalcony.UseVisualStyleBackColor = true;
+            this.radBalcony.CheckedChanged += new System.EventHandler(this.sectionRadioButtond_CheckedChanged);
             // 
             // radGeneral
             // 
@@ -107,6 +108,7 @@
             this.radGeneral.TabStop = true;
             this.radGeneral.Text = "General";
             this.radGeneral.UseVisualStyleBackColor = true;
+            this.radGeneral.CheckedChanged += new System.EventHandler(this.sectionRadioButtond_CheckedChanged);
             // 
             // radBox
             // 
@@ -117,6 +119,7 @@
             this.radBox.TabIndex = 8;
             this.radBox.Text = "Box Seats";
             this.radBox.UseVisualStyleBackColor = true;
+            this.radBox.CheckedChanged += new System.EventHandler(this.sectionRadioButtond_CheckedChanged);
             // 
             // grpSection
             // 

@@ -45,5 +45,10 @@ namespace MyNameSpace
             mTicketPrice.calculatePrice();
             lblAmount.Text = System.Convert.ToString(mTicketPrice.AmountDue);
         }
-     }
+
+        private void sectionRadioButtond_CheckedChanged(object sender, EventArgs e)
+        {
+            discountTextBox.Text = "5";
+        }
+    }
 }
