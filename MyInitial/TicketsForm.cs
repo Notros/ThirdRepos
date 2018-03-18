@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Ticketing
+namespace MyNameSpace
 {
     public partial class TicketsForm : Form
     {
