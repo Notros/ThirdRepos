@@ -15,6 +15,7 @@ namespace MyNameSpace
         int mSection = 2;
         int mQuantity = 0;
         bool mDiscount = false;
+        decimal discountAmount = 0;
 
         public TicketsForm()
         {
@@ -31,7 +32,10 @@ namespace MyNameSpace
             mQuantity = int.Parse(txtQuantity.Text);
 
             if (chkDiscount.Checked)
-                { mDiscount = true; }
+            {
+                mDiscount = true;
+                discountAmount = decimal.Parse(discountTextBox.Text);
+            }
 
             if (radBalcony.Checked)
                 { mSection = 1; }
@@ -39,8 +43,10 @@ namespace MyNameSpace
                 { mSection = 2; }
             if (radBox.Checked)
                 { mSection = 3; }
+            if (backStallRadioButton.Checked)
+                { mSection = 4; }
 
-            mTicketPrice = new TicketPrice(mSection, mQuantity, mDiscount);
+            mTicketPrice = new TicketPrice(mSection, mQuantity, mDiscount, discountAmount);
 
             mTicketPrice.calculatePrice();
             lblAmount.Text = System.Convert.ToString(mTicketPrice.AmountDue);
